@@ -1,0 +1,31 @@
+[project]
+name = "py313"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "wwfyde", email = "wwfyde@163.com" }
+]
+dependencies = [
+    "pydantic>=2.9.2",
+]
+readme = "README.md"
+requires-python = ">= 3.12"
+
+[project.scripts]
+"py313" = "py313:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = [
+    "ipython>=8.28.0",
+]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/py313"]
